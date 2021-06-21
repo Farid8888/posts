@@ -1,0 +1,40 @@
+.Main{
+    display: flex;
+    background-color: red;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Main ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+
+.Main li{
+    display: flex;
+    margin: 0 50px;
+}
+
+.Main a{
+    text-decoration: none;
+    color: seashell;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+
+.Main a:hover,
+.Main a:active,
+.Main a.active{
+color:slateblue
+}
+
+
+
+
+
+
