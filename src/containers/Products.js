@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import ProductItem from '../components/ProductItem/ProductItem'
-
+import './Products.css'
 
 
 const products = props =>{
@@ -13,9 +13,9 @@ const products = props =>{
                             isFav={p.isFavorite}/>
     })
 return(
-<main>
+<ul className='products-list'>
     {productList}
-</main>
+</ul>
 )
 }
 

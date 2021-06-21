@@ -1,0 +1,14 @@
+.item h2{
+    margin:0.25rem 0;
+    font-size: 1.15rem;
+}
+
+.item p{
+    margin:0.25rem 0;
+}
+
+.item h2.isFav{
+    color:red
+}
+
+

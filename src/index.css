@@ -1,15 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
-
-
-
-
-body{
-  margin:0;
-  
-}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
 
 * {
   box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
 }
 
 
@@ -21,8 +19,32 @@ body{
 
 
 button{
-  background-color: white;
-  padding: 2px;
-  margin: 3px;
-  
+  background-color:white;
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 0;
+  border:1px solid red;
+  border-radius: 6px;
+  font-size: 1rem;
+  color:red;
+  cursor: pointer;
 }
+
+
+button:hover,
+button:active{
+  color:white;
+  background-color: red;
+}
+
+button.button-outline{
+  color: white;
+  background-color: red;
+}
+
+button.button-outline:active,
+button.button-outline:hover{
+  color:red;
+  background-color:white;
+}
+
+

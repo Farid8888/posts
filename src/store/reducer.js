@@ -1,4 +1,5 @@
 import React from 'react'
+import * as actionTypes from './actionTypes'
 
 const initialState = {
     products: [
@@ -31,6 +32,18 @@ const initialState = {
 
 const productReducer =(state=initialState, action)=>{
 switch(action.type){
+    case actionTypes.TOOGLE_FAV:
+        const indexProd = state.products.findIndex(p=>p.id === action.productId)
+        const newStatus = !state.products[indexProd].isFavorite
+        const updatedProducts = [...state.products]
+        updatedProducts[indexProd]={
+            ...state.products[indexProd],
+            isFavorite:newStatus
+        }
+        return {
+            ...state,
+            products:updatedProducts
+        }
     default:
         return state
 }
