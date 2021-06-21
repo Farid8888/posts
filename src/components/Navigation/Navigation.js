@@ -1,19 +1,19 @@
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import classes from  './Navigation.module.css'
+import  './Navigation.css'
 
 
 
 const navigation =()=>{
 return (
-    <header className={classes.Main}>
+    <header className='Main'>
         <nav>
             <ul>
                 <li>
-                  <NavLink activeStyle={{color:'slateblue'}} to ="/" exact>All Products</NavLink>
+                  <NavLink  to ="/" exact>All Products</NavLink>
                 </li>
                 <li>
-                <NavLink activeStyle={{color:'slateblue'}}  to = "/favorites">Favorites</NavLink>
+                <NavLink   to = "/favorites">Favorites</NavLink>
                 </li>
             </ul>
         </nav>
