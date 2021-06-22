@@ -1,15 +1,16 @@
 import React from 'react'
 import './ProductItem.css'
 import Card from '../../UI/Card'
-import {connect} from 'react-redux'
-import * as actions from '../../store/index'
+import {useStore} from '../../hooks/hook'
 
 
 
-const productItem = props=>{
+const ProductItem = props=>{
+
+const dispatch = useStore()[1]     
 
 const toogleHandler =(productId)=>{
-props.onToogle(productId)
+dispatch('TOOGLE_FAV',productId)
 }    
 
 return(
@@ -27,13 +28,9 @@ return(
 }
 
 
-const mapDispatchToProps=dispatch=>{
-    return{
-        onToogle:(id)=> dispatch(actions.toogle(id))
-    }
-}
 
 
 
 
-export default connect(null,mapDispatchToProps)(productItem)
+
+export default ProductItem
