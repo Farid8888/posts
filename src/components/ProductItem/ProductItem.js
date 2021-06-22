@@ -1,15 +1,18 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import './ProductItem.css'
 import Card from '../../UI/Card'
-import {connect} from 'react-redux'
-import * as actions from '../../store/index'
+import { ProductContext } from '../../context/context'
 
 
 
-const productItem = props=>{
+const ProductItem = props=>{
+
+const toogle = useContext(ProductContext).toogle
+
+
 
 const toogleHandler =(productId)=>{
-props.onToogle(productId)
+toogle(productId)
 }    
 
 return(
@@ -27,13 +30,8 @@ return(
 }
 
 
-const mapDispatchToProps=dispatch=>{
-    return{
-        onToogle:(id)=> dispatch(actions.toogle(id))
-    }
-}
 
 
 
 
-export default connect(null,mapDispatchToProps)(productItem)
+export default ProductItem
